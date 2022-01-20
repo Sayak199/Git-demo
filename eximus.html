@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Remove the Comments and fill up the relevant code -->
+        <!-- Write necessary code wherever needed to complete this code challenge  -->
+        <!-- Do specify all the component-ids correctly for your code to get evaluated successfully -->
+        <title>Eximus - An IT Job Portal For Freshers</title> 
+    <style>
+    *{
+      background-color: #C2A1A1;
+      color:#ffffff;
+      font-family: Georgia;
+      font-size:20px;  
+    }
+    input[type="text"], input[type="email"], input[type="url"], input[type="number"], select {
+      width: 98%;
+    }
+    input[type="range"] {
+      width: 83%;
+    }
+    ::placeholder{
+      color:#FFFFFF;
+    }
+    h3{
+      border: 2px solid #FFFFFF;
+      
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 57%;
+      color: #5D4079 ;
+      background-color: #FFFFFF;
+      border-radius: 6px;
+      border-spacing: 2px;
+      font-size: 30px;
+    }
+    table{
+      
+      margin-left: auto;
+      margin-right: auto;
+    }
+    td{
+      border: 2px solid #FFFFFF;
+      color:#FFFFFF;
+      
+      padding: 5px;
+      border-radius: 6px;
+      border-spacing: 5px;
+    }
+    #submit {
+        margin-left:45%;
+      
+      color: #FFFFFF;
+      background-color: #5D4079;
+      border-radius: 6px;
+      padding: 3px;
+      font-weight: bold;
+    }
+    #submit:hover {      
+    background-color: #FFFFFF; 
+    color:#5D4079; 
+    }
+    .d{
+      color:#000000;
+    }
+    .c{
+      
+      color: #5D4079;
+      background-color: #FFFFFF;
+      font-weight: bold; 
+    }    
+    </style>
+  </head>
+  
+    <body>
+
+        <script>
+          function show_value(x)
+          {
+          document.getElementById("demo").innerHTML=x;
+          }
+        </script>
+        <h3>Eximus - An IT Job Portal For Freshers</h3>
+        <table>
+          <tr>
+              <td class="c">Company Details</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+            <input id="cname" type="text" placeholder="Enter the Company name*" required/></td>
+            <td class="a">
+                <input id="phno" type="tel" minlength="10" maxlength="10" pattern="[7-9]{1}[0-9]{9}" placeholder="Official contact number*" required/></td>
+          </tr>
+          <tr>
+            <td colspan="2" rowspan="2">
+                
+            <textarea id="address" name="address" rows="4" cols="50" placeholder="Enter the Address of Head Office*" required ></textarea></td>
+            <td>
+                <input type="email" id="email" placeholder="Enter the Email ID*" required/></td>
+          </tr>
+          <tr>
+              <td>
+                  <input type="url" id="link" placeholder="Official website link" required/></td>
+          </tr>
+            <tr>
+              <td class="c">Job Details</td>
+          </tr>
+          <tr>
+            <td>
+            <select id="jobrole">
+              <option value=" ">Select the job role..</option> 
+              <option class="d" value="Developer">Developer</option> 
+              <option class="d" value="Tester">Tester</option>
+              <option class="d" value="Trainer">Trainer</option>
+            </select>
+            </td>
+            <td><a id="job_desc" href="#submit">Job description</a><br/>
+            <td>
+                <input type="text" id="noOfVacancies" placeholder="Enter the no of vacancies*" required/></td>
+          </tr>
+          <tr>
+            <td>Pay scale (approx)</td>
+            <td colspan="2">
+                <input type="range"  id="pay" min="10000" max="30000" onchange="show_value(this.value);" required /><span id="demo"></span></td>
+            </tr>
+          <tr>
+            <td>
+            <select id="location">
+              <option value=" ">Select the job location..</option> 
+              <option class="d" value="Chennai">Chennai</option> 
+              <option class="d" value="Mumbai">Mumbai</option>
+              <option class="d" value="Pune">Pune</option>
+            </select>
+                </td>
+            <td colspan="2">
+            <input type="text" id="certification" placeholder="“Enter the Certification required*" required /></td>  
+            </tr>
+            
+          <tr>
+            <td colspan="2" required>Work options :
+            <input type="checkbox" id="parttime" />Part-time
+            <input type="checkbox" id="fulltime" />Full-time
+            <input type="checkbox" id="freelancing" />Freelancing
+            </td>  
+            <td>
+                <a id="terms" href="#who">Who can apply ?</a></td>  
+            </tr>
+        </table>
+        <br/>
+        <p>
+            <input type="button" id="submit" value="POST JOB"/></p>
+    </body>
+</html>
